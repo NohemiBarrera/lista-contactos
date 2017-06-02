@@ -17,20 +17,14 @@ function cleanModal(id) {
 }
 
  //archivos
-var telephone = document.getElementById("input-phone");
-var publicar = document.getElementById("publicar");
-var publicaciones = document.getElementById("publicaciones");
-publicaciones.setAttribute("class", "card")
-var nombre = document.getElementById("input-name");
-var correo = document.getElementById("input-mail");
+var telephone = $('#input-phone')[0];
+var publicar = $('#publicar')[0];
+var publicaciones = $('#publicaciones')[0];
+$(publicaciones).addClass("card");
+var nombre = $('#input-name')[0];
+var correo = $('#input-mail')[0];
 
-/*newTxt.addEventListener("keyup", contadorDeCaracteres);*/
-publicar.addEventListener("click", agregarContacto);
-
-/*function contadorDeCaracteres(){
-  var numeroCaracteres = newTxt.value.length;
-  document.getElementById("caracteres").innerText = numeroCaracteres;
-}*/
+$(publicar).on('click', agregarContacto);
 
 function agregarContacto(){
   var articulo = document.createElement("section");
@@ -40,12 +34,12 @@ function agregarContacto(){
   parrafo2.innerText = nombre.value;
   parrafo.innerText = telephone.value;
   parrafo3.innerText = correo.value;
-  articulo.appendChild(parrafo2);
-  articulo.appendChild(parrafo);
-  articulo.appendChild(parrafo3);
-  publicaciones.insertBefore(articulo, publicaciones.firstChild);
+  articulo.append(parrafo2);
+  articulo.append(parrafo);
+  articulo.append(parrafo3);
+  publicaciones.before(articulo, publicaciones.firstChild);
   telephone.value = "";
-  nombre.value= "";
+  nombre.value = "";
   correo.value = "";
   cleanModal("modalContact");
  };
