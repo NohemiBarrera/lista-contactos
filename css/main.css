@@ -1,0 +1,34 @@
+h5{
+	text-align: center;
+}
+p, h5{
+	font-family: "ubuntu";
+	text-align: left;
+}
+p{
+	margin: 12px;
+	text-decoration-style: dotted;
+}
+button{
+	margin: 0px;
+	text-align: center;
+}
+section{
+	background-color: #e1f5fe;
+}
+.container{
+	padding: 0;
+	margin: 20px;
+}
+a.brand-logo{
+	font-size: 1.5em;
+}
+#contactosNav{
+	height: 45px;
+}
+.nav-wrapper{
+	border: none;
+}
+#search{
+	text-align: justify;
+}

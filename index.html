@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Contactos</title>
+</head>
+<body>
+
+	<!--Búsqueda-->
+	<header class="col 12">
+		<nav>
+		    <div class="nav-wrapper">
+		      <form>
+		        <div class="input-field light-blue lighten-4">
+		          <input id="search" type="search" required value="Contactos">
+		          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+		          <i class="material-icons">close</i>
+		        </div>
+		      </form>
+		    </div>
+		</nav>
+	</header>
+	<p>Contactos existentes:</p>
+	<section class="container" id="publicaciones">
+  </section>
+
+	<!--Fixed Action Button-->
+    <div class="fixed-action-btn horizontal">
+      <a class="btn-floating btn-large green accent-3">
+        <i class="large material-icons">library_add</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating green accent-2" href="#modalMsj" ><i class="material-icons" data-target="modal1">contact_phone</i></a></li>
+      </ul>
+    </div>
+    <!--Fin FAB-->
+
+	 <!-- Modal Mensaje -->
+    <div class="modal" id="modalMsj">
+      <div class="modal-content row">
+        <div class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="modal-name" type="text" class="validate"/>
+                <label for="name">Nombre</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">phone</i>
+              <input id="modal-phone" type="tel" class="validate"/>
+                <label for="phone">Teléfono</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">email</i>
+              <input id="modal-mail" type="email" class="validate"/>
+                <label for="mail">Correo</label>
+            </div>
+
+  
+            
+            <button class="btn waves-effect waves-light right green accent-3" type="submit" name="action" data-publication="text" id="publicar">Agregar</button>
+            <!--intento de botón cerrar-->
+            <button class="btn waves-effect waves-light modal-close red" id="publicar">
+            <i class="material-icons right">not_interested</i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--fin modal mensaje-->
+	<!--Import jQuery-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
