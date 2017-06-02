@@ -27,6 +27,7 @@
 	<p>Contactos existentes:</p>
 	<section class="container" id="publicaciones">
   </section>
+  <!--fin búsqueda-->
 
 	<!--Fixed Action Button-->
     <div class="fixed-action-btn horizontal">
@@ -34,38 +35,36 @@
         <i class="large material-icons">library_add</i>
       </a>
       <ul>
-        <li><a class="btn-floating green accent-2" href="#modalMsj" ><i class="material-icons" data-target="modal1">contact_phone</i></a></li>
+        <li><a class="btn-floating green accent-2" href="#modalContact" ><i class="material-icons" data-target="modal1">contact_phone</i></a></li>
       </ul>
     </div>
     <!--Fin FAB-->
 
-	 <!-- Modal Mensaje -->
-    <div class="modal" id="modalMsj">
+	 <!-- Modal agregar contacto -->
+    <div class="modal" id="modalContact">
       <div class="modal-content row">
         <div class="col s12">
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix">account_circle</i>
-              <input id="modal-name" type="text" class="validate"/>
+              <input id="input-name" type="text" class="validate"/>
                 <label for="name">Nombre</label>
             </div>
             <div class="input-field col s12">
               <i class="material-icons prefix">phone</i>
-              <input id="modal-phone" type="tel" class="validate"/>
+              <input id="input-phone" type="tel" class="validate"/>
                 <label for="phone">Teléfono</label>
             </div>
             <div class="input-field col s12">
               <i class="material-icons prefix">email</i>
-              <input id="modal-mail" type="email" class="validate"/>
+              <input id="input-mail" type="email" class="validate"/>
                 <label for="mail">Correo</label>
             </div>
-
-  
-            
             <button class="btn waves-effect waves-light right green accent-3" type="submit" name="action" data-publication="text" id="publicar">Agregar</button>
-            <!--intento de botón cerrar-->
+            <!--botón cerrar-->
             <button class="btn waves-effect waves-light modal-close red" id="publicar">
             <i class="material-icons right">not_interested</i>
+            <!--fin botón cerrar-->
           </div>
         </div>
       </div>

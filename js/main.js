@@ -17,12 +17,12 @@ function cleanModal(id) {
 }
 
  //archivos
-var newTxt = document.getElementById("modal-phone");
+var telephone = document.getElementById("input-phone");
 var publicar = document.getElementById("publicar");
 var publicaciones = document.getElementById("publicaciones");
 publicaciones.setAttribute("class", "card")
-var nombre = document.getElementById("modal-name");
-var correo = document.getElementById("modal-mail");
+var nombre = document.getElementById("input-name");
+var correo = document.getElementById("input-mail");
 
 /*newTxt.addEventListener("keyup", contadorDeCaracteres);*/
 publicar.addEventListener("click", agregarContacto);
@@ -38,14 +38,14 @@ function agregarContacto(){
   var parrafo2 = document.createElement("h5");
   var parrafo3 = document.createElement("p");
   parrafo2.innerText = nombre.value;
-  parrafo.innerText = newTxt.value;
+  parrafo.innerText = telephone.value;
   parrafo3.innerText = correo.value;
   articulo.appendChild(parrafo2);
   articulo.appendChild(parrafo);
   articulo.appendChild(parrafo3);
   publicaciones.insertBefore(articulo, publicaciones.firstChild);
-  newTxt.value = "";
+  telephone.value = "";
   nombre.value= "";
   correo.value = "";
-  cleanModal("modalMsj");
+  cleanModal("modalContact");
  };
